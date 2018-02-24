@@ -1,0 +1,9 @@
+*.o
+moc_*
+*.so*
+ui_*.h
+qrc_*.cpp
+Makefile*
+.kscope
+.qmake.stash
+*.pro.user
