@@ -24,5 +24,10 @@ SOURCES += engineconfigwidget.cpp \
 INCLUDEPATH += .. \
     .
 LIBS += -L../core -lkscope_core
-target.path = $${INSTALL_PATH}/lib
+target.path = $${INSTALL_PATH}/lib64
 INSTALLS += target
+QT += widgets xml
+
+FORMS += \
+    ../core/progressbar.ui
+

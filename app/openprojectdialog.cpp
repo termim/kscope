@@ -49,7 +49,7 @@ OpenProjectDialog::~OpenProjectDialog()
  * Shows the dialogue in modal mode.
  * @return See ExecResult
  */
-OpenProjectDialog::ExecResult OpenProjectDialog::exec()
+int OpenProjectDialog::exec()
 {
 	// Populate the "Recent Projects" list.
 	bool first = true;
@@ -82,8 +82,8 @@ OpenProjectDialog::ExecResult OpenProjectDialog::exec()
 void OpenProjectDialog::browse()
 {
 	// Set up the dialogue.
-	QFileDialog dlg(this);
-	dlg.setFileMode(QFileDialog::DirectoryOnly);
+    QFileDialog dlg(this);
+    dlg.setFileMode(QFileDialog::DirectoryOnly);
 	dlg.setNameFilter("[^\\.]* .kscope");
 	dlg.setFilter(QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot);
 

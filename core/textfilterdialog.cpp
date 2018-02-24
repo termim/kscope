@@ -56,11 +56,13 @@ TextFilterDialog::TextFilterDialog(const QRegExp& re, QWidget* parent)
 
 		case QRegExp::RegExp:
 		case QRegExp::RegExp2:
+        case QRegExp::W3CXmlSchema11:
 			regExpButton_->setChecked(true);
 			break;
 
 		case QRegExp::Wildcard:
-			simpRegExpButton_->setChecked(true);
+        case QRegExp::WildcardUnix:
+            simpRegExpButton_->setChecked(true);
 			break;
 		}
 	}

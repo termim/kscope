@@ -51,8 +51,9 @@ public:
 	 * @param  colList  An ordered list of location structure fields
 	 */
 	void setColumns(const QList<Location::Fields>& colList) {
+            beginResetModel();
 		colList_ = colList;
-		reset();
+                endResetModel();
 	}
 
 	/**

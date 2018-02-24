@@ -122,9 +122,10 @@ void LocationTreeModel::clear(const QModelIndex& parent)
 	// Handle the root node (removing all data from the model).
 	if (!parent.isValid()) {
 		if (root_.childCount() > 0) {
+                    beginResetModel();
 			root_.clear();
 			root_.data().locationsAdded_ = false;
-			reset();
+                        endResetModel();
 		}
 		return;
 	}

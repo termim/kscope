@@ -344,7 +344,7 @@ void Editor::gotoLine()
 
 	// Prompt for a new line number.
 	bool ok;
-	line = QInputDialog::getInteger(this, tr("Enter Line Number"),
+	line = QInputDialog::getInt(this, tr("Enter Line Number"),
 	                                tr("Line"), line + 1, 1, lines(), 1, &ok);
 	if (ok)
 		setCursorPosition(line - 1, 0);

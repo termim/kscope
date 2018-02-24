@@ -37,5 +37,6 @@ SOURCES += locationtreemodel.cpp \
     locationview.cpp \
     textfilterdialog.cpp
 RESOURCES = core.qrc
-target.path = $${INSTALL_PATH}/lib
+target.path = $${INSTALL_PATH}/lib64
 INSTALLS += target
+QT += widgets xml

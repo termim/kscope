@@ -1,5 +1,7 @@
 include(config)
 
+CONFIG += qscintilla2_qt5
+
 TEMPLATE = subdirs
 
 # Directories

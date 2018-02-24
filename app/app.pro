@@ -51,14 +51,18 @@ FORMS += querydialog.ui \
     configenginesdialog.ui \
     openprojectdialog.ui
 INCLUDEPATH += .. \
-    $${QSCI_ROOT_PATH}/include/Qsci \
+    $${QSCI_ROOT_PATH}/include/qt5/Qsci \
     .
 LIBS += -L../core \
     -lkscope_core \
     -L../cscope \
     -lkscope_cscope \
     -L../editor \
-    -lkscope_editor
+    -lkscope_editor \
+    -L$${QSCI_ROOT_PATH}/lib64 \
+    -lqscintilla2_qt5
 RESOURCES = app.qrc
 target.path = $${INSTALL_PATH}/bin
 INSTALLS += target
+QT += widgets xml
+

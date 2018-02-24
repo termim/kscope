@@ -159,8 +159,9 @@ void LexerStyleModel::applyInheritance(const QModelIndex& index)
  */
 void LexerStyleModel::resetStyles()
 {
-	resetStyle(root_.child(0));
-	reset();
+    beginResetModel();
+        resetStyle(root_.child(0));
+    endResetModel();
 }
 
 /**
